@@ -1,0 +1,201 @@
+{% block title %}Pritam | AI & Robotics Portfolio{% endblock %}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row align-items-center" data-aos="fade-up">
+
+    <div class="col-md-6 text-center text-md-start">
+        <h1 class="display-5 fw-bold">
+            Hi, I'm Pritam Rabha
+        </h1>
+
+        <h4 class="text-primary mb-3">
+            ML • AI • Robotics Developer
+        </h4>
+
+        <p class="lead">
+            I build intelligent systems using Machine Learning, Artificial Intelligence,
+            Robotics, and Python-based web technologies.
+        </p>
+
+        <a href="#" class="btn btn-primary btn-lg mt-3">
+            View My Projects
+        </a>
+    </div>
+
+    <div class="col-md-6 text-center">
+        <img src="https://via.placeholder.com/300"
+             class="img-fluid rounded-circle shadow"
+             alt="Profile">
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<h2 class="text-center mb-5">My Skills</h2>
+
+<div class="row g-4 justify-content-center">
+
+  <!-- ML -->
+  <div class="col-md-4" data-aos="zoom-in">
+    <div class="card bg-dark text-white shadow h-100">
+      <div class="card-body">
+        <h5>Machine Learning</h5>
+        <div class="progress">
+          <div class="progress-bar bg-primary" style="width:75%">75%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <div class="col-md-4" data-aos="zoom-in">
+    <div class="card bg-dark text-white shadow h-100">
+      <div class="card-body">
+        <h5>Artificial Intelligence</h5>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width:70%">70%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Robotics -->
+  <div class="col-md-4" data-aos="zoom-in">
+    <div class="card bg-dark text-white shadow h-100">
+      <div class="card-body">
+        <h5>Robotics</h5>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width:65%">65%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Python -->
+  <div class="col-md-4" data-aos="zoom-in">
+    <div class="card bg-dark text-white shadow h-100">
+      <div class="card-body">
+        <h5>Python</h5>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width:90%">90%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Web -->
+  <div class="col-md-4" data-aos="zoom-in">
+    <div class="card bg-dark text-white shadow h-100">
+      <div class="card-body">
+        <h5>Web Development</h5>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width:70%">70%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="my-5">
+
+<h2 class="text-center mb-4">My Projects</h2>
+
+<div class="row g-4">
+
+  <!-- Project 1 -->
+  <div class="col-md-4" data-aos="fade-up">
+    <div class="card bg-dark text-white shadow h-100">
+      <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="project">
+      <div class="card-body">
+        <h5 class="card-title">AI Chatbot</h5>
+        <p class="card-text">
+          Built an intelligent chatbot using Python and NLP.
+        </p>
+        <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="col-md-4" data-aos="fade-up">
+    <div class="card bg-dark text-white shadow h-100">
+      <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="project">
+      <div class="card-body">
+        <h5 class="card-title">Gesture Controlled Robot</h5>
+        <p class="card-text">
+          Robotics project using OpenCV and Arduino.
+        </p>
+        <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="col-md-4" data-aos="fade-up">
+    <div class="card bg-dark text-white shadow h-100">
+      <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="project">
+      <div class="card-body">
+        <h5 class="card-title">ML Prediction System</h5>
+        <p class="card-text">
+          Machine learning model for prediction and analysis.
+        </p>
+        <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<hr class="my-5">
+
+<h2 class="text-center mb-4">My Resume</h2>
+
+<div class="text-center" data-aos="fade-up">
+    <p>You can download my resume below.</p>
+    <a href="/resume" class="btn btn-success btn-lg">
+        Download Resume
+    </a>
+</div>
+
+
+<hr class="my-5">
+
+<h2 class="text-center mb-4">Contact Me</h2>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+
+    <form method="POST" action="/contact">
+
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" name="message" rows="4" required></textarea>
+      </div>
+
+      <button class="btn btn-primary w-100">Send Message</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+
