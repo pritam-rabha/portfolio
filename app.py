@@ -16,22 +16,23 @@ ADMIN_PASSWORD_HASH = "scrypt:32768:8:1$Oog09zPBI4KygGSF$fd271d0200448c63407c428
 app = Flask(__name__)
 app.secret_key = "supersecretkey123"
 
-# PostgreSQL Config
-DB_CONFIG = {
-    "host": "localhost",
-    "database": "portfolio_db",
-    "user": "pritam",
-    "password": "p7r7i4t8@"
-}
-
 
 EMAIL_ADDRESS = "pritamrba@gmail.com"
 EMAIL_PASSWORD = "auoy gdtq clfh vgsv"
 
 
-
+# PostgreSQL Config
 def get_db():
-    return psycopg2.connect(**DB_CONFIG)
+    database_url = os.getenv("DATABASE_URL")
+
+    if not database_url:
+        raise RuntimeError("DATABASE_URL not set")
+
+    return psycopg2.connect(database_url, sslmode="require")
+
+
+
+
 
 # Create contacts table
 def create_table():
@@ -42,14 +43,14 @@ def create_table():
             id SERIAL PRIMARY KEY,
             name TEXT,
             email TEXT,
-            message TEXT
+            message TEXT,
+            replied BOOLEAN DEFAULT FALSE
         )
     """)
     conn.commit()
     cur.close()
     conn.close()
 
-create_table()
 
 
 
