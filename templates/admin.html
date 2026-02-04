@@ -2,24 +2,71 @@
 {% block title %}Admin | Pritam{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">Admin Dashboard</h2>
+<div class="admin-panel">
 
-<table class="table table-dark table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Message</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for m in messages %}
-    <tr>
-      <td>{{ m[0] }}</td>
-      <td>{{ m[1] }}</td>
-      <td>{{ m[2] }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-white">Admin Dashboard</h2>
+    <a href="/logout" class="btn btn-danger btn-sm px-3">Logout</a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table admin-table align-middle">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+          <th>Reply</th>
+          <th class="text-end">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for m in messages %}
+        <tr class="{% if m[4] %}replied-row{% endif %}">
+          <td>{{ m[1] }}</td>
+          <td>{{ m[2] }}</td>
+          <td class="text-muted">{{ m[3] }}</td>
+
+          <!-- REPLY -->
+          <td>
+            {% if m[4] %}
+              <span class="badge bg-success">Replied</span>
+            {% else %}
+              <form method="POST" action="/reply/{{ m[0] }}/{{ m[2] }}">
+                <textarea name="reply"
+                          class="form-control reply-box mb-2"
+                          rows="2"
+                          placeholder="Type reply..."
+                          required></textarea>
+                <button class="btn btn-success btn-sm">
+                  <i class="fa-solid fa-paper-plane me-1"></i> Reply
+                </button>
+              </form>
+            {% endif %}
+          </td>
+
+          <!-- ACTIONS -->
+          <td class="text-end">
+            <form method="POST"
+                  action="/delete/{{ m[0] }}"
+                  onsubmit="return confirm('Delete this message?');">
+              <button class="btn btn-outline-danger btn-sm">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="5" class="text-center text-muted py-4">
+            No messages yet
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</div>
 {% endblock %}

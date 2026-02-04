@@ -1,0 +1,14 @@
+pip freeze > requirements.txt
+Flask
+psycopg2-binary
+Werkzeug
+pip install gunicorn
+pip freeze > requirements.txt
+if __name__ == "__main__":
+    app.run()
+
+
+
+
+# if __name__ == "__main__":
+#     app.run(debug=False)

@@ -2,38 +2,60 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row align-items-center" data-aos="fade-up">
 
-    <div class="col-md-6 text-center text-md-start">
-        <h1 class="display-5 fw-bold">
-            Hi, I'm Pritam Rabha
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- PHOTO (MOBILE FIRST) -->
+      <div class="col-lg-5 text-center order-lg-2">
+        <div class="profile-glow">
+          <img src="{{ url_for('static', filename='images/profile1.jpg') }}"
+               alt="Pritam Rabha"
+               class="profile-image">
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="col-lg-7 order-lg-1 text-center text-lg-start">
+        <h1 class="hero-title">
+          Pritam <span class="accent">Rabha</span>
         </h1>
 
-        <h4 class="text-primary mb-3">
-            ML • AI • Robotics Developer
-        </h4>
-
-        <p class="lead">
-            I build intelligent systems using Machine Learning, Artificial Intelligence,
-            Robotics, and Python-based web technologies.
+        <p class="hero-role">
+          ML • AI • Robotics Engineer
         </p>
 
-        <a href="#" class="btn btn-primary btn-lg mt-3">
-            View My Projects
-        </a>
+        <p class="hero-text">
+          I design intelligent systems using Machine Learning,
+          Artificial Intelligence, Robotics, and Python.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/projects" class="btn btn-primary btn-lg w-100 w-lg-auto">
+            <i class="fa-solid fa-folder-open me-2"></i> Projects
+          </a>
+
+          <a href="/contact" class="btn btn-outline-light btn-lg w-100 w-lg-auto">
+            <i class="fa-solid fa-envelope me-2"></i> Contact
+          </a>
+        </div>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    <div class="col-md-6 text-center">
-        <img src="https://via.placeholder.com/300"
-             class="img-fluid rounded-circle shadow"
-             alt="Profile">
-    </div>
 
-</div>
 
-<hr class="my-5">
 
-<h2 class="text-center mb-5">My Skills</h2>
+
+<section class="skills-section">
+  <h2 class="text-center mb-5">My Skills</h2>
+  <!-- your existing skills cards -->
+</section>
+
+
 
 <div class="row g-4 justify-content-center">
 

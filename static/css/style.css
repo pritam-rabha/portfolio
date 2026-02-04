@@ -1,0 +1,658 @@
+
+body {
+  background:#0f172a;
+  color:white;
+  transition: 0.3s;
+}
+
+
+:root {
+  --bg-dark: #020617;
+  --card-dark: #0f172a;
+  --accent: #38bdf8;
+  --text-soft: #94a3b8;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* smooth animations */
+* {
+  transition: all 0.25s ease;
+}
+
+
+/* ==========================
+   HERO SECTION (PRO)
+========================== */
+
+.hero {
+  padding: 90px 0 60px;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow */
+.profile-glow {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56,189,248,0.6), transparent 70%);
+}
+
+/* Title */
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.accent {
+  color: #38bdf8;
+}
+
+/* Role */
+.hero-role {
+  color: #38bdf8;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Description */
+.hero-text {
+  max-width: 420px;
+  margin: 0 auto 25px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Desktop improvements */
+@media (min-width: 992px) {
+  .hero {
+    padding: 120px 0 80px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-text {
+    margin-left: 0;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+/* Glassmorphism Theme Toggle */
+.theme-toggle {
+  width: 56px;
+  height: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.theme-toggle span {
+  width: 22px;
+  height: 22px;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transform: translateX(0);
+}
+
+/* Light mode */
+body.light {
+  background: #f8fafc;
+  color: #111827;
+}
+
+body.light .card {
+  background: #ffffff !important;
+  color: #111827 !important;
+}
+
+body.light footer {
+  background: #e5e7eb !important;
+  color: #111827 !important;
+}
+
+body.light .theme-toggle {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0,0,0,0.1);
+}
+
+body.light .theme-toggle span {
+  transform: translateX(26px);
+  background: #facc15;
+}
+
+/* Smooth transition for theme change */
+* {
+  transition: 
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Active nav link */
+.navbar .nav-link.active {
+  color: #38bdf8 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #38bdf8;
+}
+
+
+/* Navbar blur on scroll */
+.navbar.scrolled {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.75) !important;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+/* Page transition */
+.page {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+body.light p {
+  color: #374151;
+}
+
+
+
+.btn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border: none;
+}
+
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px;
+    border-radius: 12px;
+  }
+}
+
+
+
+a:focus, button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+
+
+/* Glow effect for cards (Skills + Projects) */
+.card {
+  position: relative;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover glow */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 0 20px rgba(56, 189, 248, 0.6),
+    0 0 40px rgba(56, 189, 248, 0.4);
+}
+
+/* Light mode glow */
+body.light .card:hover {
+  box-shadow:
+    0 0 20px rgba(37, 99, 235, 0.35),
+    0 0 40px rgba(37, 99, 235, 0.25);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248, 0.6);
+}
+
+
+
+
+/*Admin*/
+
+.admin-panel {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+body.light .admin-panel {
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+
+
+/* HERO SECTION */
+.hero {
+  padding: 120px 0 80px;
+}
+
+/* Hero card */
+.hero-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border-radius: 24px;
+  padding: 60px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+
+/* Typography */
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-title .accent {
+  color: var(--accent);
+}
+
+.hero-role {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #38bdf8;
+}
+
+.hero-text {
+  margin-top: 22px;
+  max-width: 520px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* Actions */
+.hero-actions {
+  margin-top: 32px;
+}
+
+.hero-actions .btn {
+  border-radius: 14px;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+/* Profile */
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-glow {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow:
+    0 0 0 6px rgba(56, 189, 248, 0.15),
+    0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #0f172a;
+}
+
+/* Light mode */
+body.light .hero-card {
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+body.light .hero-role {
+  color: #2563eb;
+}
+
+body.light .profile-glow {
+  box-shadow:
+    0 0 0 6px rgba(37, 99, 235, 0.18),
+    0 15px 35px rgba(0,0,0,0.15);
+}
+
+
+/* ===== FIX BUTTON VISIBILITY IN LIGHT MODE ===== */
+
+/* Primary button */
+body.light .btn-primary {
+  background-color: #2563eb;   /* Blue */
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Outline button (View Projects / Send Message) */
+body.light .btn-outline-light {
+  color: #2563eb;
+  border-color: #2563eb;
+  background-color: transparent;
+}
+
+/* Hover states */
+body.light .btn-outline-light:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+
+
+/* Accessible focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Button hover polish */
+.btn {
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+
+
+
+/* Mobile button spacing */
+@media (max-width: 768px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* Success animation */
+.success-box {
+  max-width: 420px;
+  margin: 120px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: popIn 0.6s ease;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: white;
+  font-size: 40px;
+  line-height: 80px;
+  margin: auto;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.5); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+body.light .success-box {
+  background: white;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+
+
+.flash-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1055;
+  width: 300px;
+}
+
+.flash-msg {
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   ADMIN DASHBOARD DARK UI
+========================= */
+
+.admin-panel {
+  background: rgba(15, 23, 42, 0.85);
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.admin-table {
+  background: rgba(2, 6, 23, 0.85);
+  color: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-table thead {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.admin-table th,
+.admin-table td {
+  border: none;
+  padding: 14px;
+}
+
+.admin-table tbody tr {
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.3s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.replied-row {
+  background: rgba(34, 197, 94, 0.08) !important;
+}
+
+/* Reply textarea */
+.reply-box {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  font-size: 0.85rem;
+  resize: none;
+}
+
+.reply-box::placeholder {
+  color: #94a3b8;
+}
+
+/* Buttons */
+.btn-success {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+}
+
+.btn-outline-danger {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.btn-outline-danger:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+
+/* ==========================
+   CONTACT FORM (PRO)
+========================== */
+
+.contact-section {
+  padding: 40px 0;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Dark mode support */
+body.dark .contact-card {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Inputs */
+.form-control {
+  background: transparent;
+  color: inherit;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #0d6efd;
+}
+
+.input-group-text {
+  background: transparent;
+  border-right: none;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+/* Button loading */
+.btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+

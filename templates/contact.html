@@ -1,34 +1,84 @@
+{% extends "base.html" %}
 {% block title %}Contact | Pritam{% endblock %}
 
-{% extends "base.html" %}
-
 {% block content %}
-<h2 class="text-center mb-4">Contact Me</h2>
 
-<div class="row justify-content-center">
-  <div class="col-md-6">
+<section class="contact-section">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
 
-    <form method="POST" action="/contact">
+      <div class="contact-card">
 
-      <div class="mb-3">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" name="name" required>
+        <h2 class="text-center mb-2">Contact Me</h2>
+        <p class="text-center text-muted mb-4">
+          Have a question or want to work together?
+        </p>
+
+        <form method="POST" action="/contact" class="needs-validation" novalidate>
+
+          <!-- NAME -->
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <div class="input-group">
+              <span class="input-group-text">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Your Name"
+                required>
+              <div class="invalid-feedback">
+                Please enter your name
+              </div>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="your@email.com"
+                required>
+              <div class="invalid-feedback">
+                Please enter a valid email
+              </div>
+            </div>
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea
+              name="message"
+              class="form-control"
+              rows="4"
+              placeholder="Write your message..."
+              required></textarea>
+            <div class="invalid-feedback">
+              Message cannot be empty
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="btn btn-primary w-100" id="sendBtn">
+            <i class="fa-solid fa-paper-plane me-2"></i>
+            <span class="btn-text">Send Message</span>
+          </button>
+
+        </form>
+
       </div>
-
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" required>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">Message</label>
-        <textarea class="form-control" name="message" rows="4" required></textarea>
-      </div>
-
-      <button class="btn btn-primary w-100">Send Message</button>
-
-    </form>
-
+    </div>
   </div>
-</div>
+</section>
+
 {% endblock %}
