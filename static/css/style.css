@@ -656,3 +656,78 @@ body.dark .contact-card {
 }
 
 
+/* =========================
+   PROFESSIONAL SKILLS
+   ========================= */
+
+.skills-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.skill-box {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.skill-box p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0;
+}
+
+.skill-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Light mode support */
+body.light .skill-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+body.light .skill-box p {
+  color: #4b5563;
+}
+
+
+
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
+
+.about-section {
+  padding: 90px 0;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #cbd5f5;
+}
+
+/* Light mode */
+body.light .about-text {
+  color: #374151;
+}
+
+/* Buttons spacing on mobile */
+.about-actions .btn {
+  margin-top: 10px;
+}

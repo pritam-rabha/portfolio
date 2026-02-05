@@ -1,22 +1,52 @@
-{% block title %}About | Pritam{% endblock %}
 {% extends "base.html" %}
+{% block title %}About | Pritam{% endblock %}
 
 {% block content %}
-<h2 class="text-center mb-4">About Me</h2>
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">About Me</h2>
 
-<div class="row justify-content-center">
-  <div class="col-md-8 text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
 
-    <p class="lead">
-      I am a passionate ML, AI and Robotics developer who loves building
-      intelligent systems and innovative projects.
-    </p>
+        <p class="about-text">
+          I am <strong>Pritam Rabha</strong>, a passionate
+          <strong> Artificial Intelligence, Machine Learning, and Robotics developer</strong>
+          with a strong interest in building intelligent systems that solve real-world problems.
+        </p>
 
-    <p>
-      My interests include Machine Learning, Artificial Intelligence,
-      Robotics, Computer Vision and Python development.
-    </p>
+        <p class="about-text">
+          My work focuses on combining <strong>ML models</strong>,
+          <strong>AI-driven decision systems</strong>, and
+          <strong>robotic hardware</strong> to create practical, scalable solutions.
+          I enjoy working at the intersection of software and hardware, where ideas turn into real systems.
+        </p>
 
+        <p class="about-text">
+          I primarily work with <strong>Python</strong>, <strong>Flask</strong>,
+          <strong>PostgreSQL</strong>, and modern web technologies to build
+          clean, secure, and responsive applications.
+          I value writing maintainable code and following industry best practices.
+        </p>
+
+        <p class="about-text">
+          My long-term goal is to grow as an engineer who designs
+          <strong>production-ready AI systems</strong>
+          and contributes to impactful technology in robotics and automation.
+        </p>
+
+        <div class="about-actions text-center mt-4">
+          <a href="/projects" class="btn btn-primary me-2">
+            View My Projects
+          </a>
+          <a href="/contact" class="btn btn-outline-secondary">
+            Contact Me
+          </a>
+        </div>
+
+      </div>
+    </div>
   </div>
-</div>
+</section>
 {% endblock %}
+
