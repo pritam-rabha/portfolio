@@ -142,23 +142,3 @@ Machine Learning • AI • Robotics Developer
 
 This project is open for learning and personal use.
 
-```
-
----
-
-## ✅ NEXT STEPS (Optional but Powerful)
-
-You can now:
-1️⃣ Add **screenshots** to README  
-2️⃣ Add **badges** (Flask, Python, Render)  
-3️⃣ Pin this repo on GitHub  
-4️⃣ Share link on LinkedIn  
-
-If you want, I can:
-- Optimize README for recruiters  
-- Add screenshots section  
-- Add GitHub badges  
-- Write a LinkedIn post for this project  
-
-
-```
